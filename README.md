@@ -25,8 +25,8 @@ Import the aRibeiro library and you can use any of its inner classes.
 
 Take a look at the examples:
 
-* [example1_draw_lines.py](https://github.com/A-Ribeiro/ARibeiroPythonFramework/blob/main/example1_draw_lines.py)
-* [example2_test_white_percentage.py](https://github.com/A-Ribeiro/ARibeiroPythonFramework/blob/main/example2_test_white_percentage.py)
+* [example1_draw_lines.py](https://github.com/A-Ribeiro/ARibeiroPythonFramework/blob/main/example1_draw_lines.py){:target="_blank" rel="noopener"}
+* [example2_test_white_percentage.py](https://github.com/A-Ribeiro/ARibeiroPythonFramework/blob/main/example2_test_white_percentage.py){:target="_blank" rel="noopener"}
 
 ### DrawLines
 
