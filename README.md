@@ -102,7 +102,7 @@ This code draw lines and get the RGB framebuffer from the GPU every frame.
 
 ## How To Install
 
-You can get the whl file from the [release tab](https://https://github.com/A-Ribeiro/ARibeiroPythonFramework/) on GitHub.
+You can get the whl file from the [release tab](https://github.com/A-Ribeiro/ARibeiroPythonFramework/releases) on GitHub.
 
 To install run the command:
 
