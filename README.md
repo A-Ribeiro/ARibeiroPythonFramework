@@ -116,3 +116,9 @@ To install run the command:
 ```bash
 pip install --ignore-installed aRibeiro-0.0.1-py3-none-any.whl
 ```
+
+If you are running on linux, you need to install GLFW:
+
+```bash
+sudo apt-get install -y libglfw3-dev libglfw3
+```
