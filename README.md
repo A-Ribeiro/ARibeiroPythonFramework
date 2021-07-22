@@ -107,8 +107,6 @@ This code draw lines and get the RGB framebuffer from the GPU every frame.
 - [ ] Add Tech Demo Soft Particles
 - [ ] Add Tech Demo Animation
 
-* __assimp__ (for assimp2bams tool)
-
 ## How To Install
 
 You can get the whl file from the [release tab](https://github.com/A-Ribeiro/ARibeiroPythonFramework/releases) on GitHub.
