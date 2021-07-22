@@ -23,6 +23,11 @@ As it is an OpenGL based, it can be used in any OS (windows, mac, linux).
 
 Import the aRibeiro library and you can use any of its inner classes.
 
+Take a look at the examples:
+
+* [example1_draw_lines.py](https://github.com/A-Ribeiro/ARibeiroPythonFramework/blob/main/example1_draw_lines.py)
+* [example2_test_white_percentage.py](https://github.com/A-Ribeiro/ARibeiroPythonFramework/blob/main/example2_test_white_percentage.py)
+
 ### DrawLines
 
 You can draw lines to a framebuffer inside the GPU memory, and copy the values from it to a CPU memory to implement your algorithm.
@@ -45,7 +50,11 @@ VIRTUAL_IMAGE_WIDTH = 1920
 VIRTUAL_IMAGE_HEIGHT = 1080
 VIRTUAL_IMAGE_LINE_WIDTH = 1.0
 
-sensorVis = SensorVis(WINDOW_WIDTH,WINDOW_HEIGHT,VIRTUAL_IMAGE_WIDTH,VIRTUAL_IMAGE_HEIGHT,VIRTUAL_IMAGE_LINE_WIDTH)
+sensorVis = SensorVis(
+    WINDOW_WIDTH,WINDOW_HEIGHT,
+    VIRTUAL_IMAGE_WIDTH,VIRTUAL_IMAGE_HEIGHT,
+    VIRTUAL_IMAGE_LINE_WIDTH
+)
 
 terminateFlag = Value("i", 0)
 def AnotherThreadLineDrawer(terminateFlag:Value, sensorVis:SensorVis):
