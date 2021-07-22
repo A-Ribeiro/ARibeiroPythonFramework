@@ -22,7 +22,7 @@ setuptools.setup(
     ],
     license='MIT',
     install_requires=[
-        'libglfw3-dev', 'libglfw3','numpy','PyOpenGL', 'PyOpenGL_accelerate', 'glfw', 'Pillow'
+        'libglfw3','numpy','PyOpenGL', 'PyOpenGL_accelerate', 'glfw', 'Pillow' #'libglfw3-dev',
     ],
     python_requires='>=3.7',
 )
