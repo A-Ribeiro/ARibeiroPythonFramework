@@ -245,7 +245,19 @@ class FloatFBOReductor:
 
         return np.min( [result, 1.0] )
     
+    def debug_ComputeMetricBuffer(self, float_fbo:GLDynamicFBO) -> float:
+        buffer = np.zeros( [ float_fbo.width * float_fbo.height, 3 ] , dtype=np.float32)
+        float_fbo.readPixels(float_fbo.width, float_fbo.height, buffer, GL_RGB, GL_FLOAT, 0)
+        count = 0.0
+        for pixel in buffer:
+            count += pixel[0]
+        print("   - Metric:",count)
+
+
     def computeMetric(self, color:np.array):
+
+        last_blend_mode = glGetBooleanv(GL_BLEND)
+        glDisable(GL_BLEND)
 
         last_read_framebuffer = glGetIntegerv(GL_READ_FRAMEBUFFER_BINDING)
         last_draw_framebuffer = glGetIntegerv(GL_DRAW_FRAMEBUFFER_BINDING)
@@ -268,6 +280,9 @@ class FloatFBOReductor:
         glViewport(0,0,self.matric_fbo.width,self.matric_fbo.height)
 
         glDrawElements(GL_TRIANGLES, np.size(self.index), GL_UNSIGNED_INT, self.index)
+        
+        # print("matric_fbo:")
+        # self.debug_ComputeMetricBuffer(self.matric_fbo)
 
         src_fbo = self.matric_fbo
 
@@ -296,6 +311,9 @@ class FloatFBOReductor:
         glBindFramebuffer(GL_DRAW_FRAMEBUFFER, last_draw_framebuffer)
         glViewport(viewport[0],viewport[1],viewport[2],viewport[3])
         glUseProgram(last_program)
+        
+        if last_blend_mode != GL_FALSE:
+            glEnable(GL_BLEND)
 
 
 
