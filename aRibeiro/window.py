@@ -98,13 +98,16 @@ class Window:
         print('Renderer:',  renderer)
         version = glGetString(GL_VERSION).decode()
         print('OpenGL version supported: ', version)
-        ext_count = glGetIntegerv(GL_NUM_EXTENSIONS)
-        ext_str = ""
-        for i in range(ext_count):
-            if len(ext_str) == 0:
-                ext_str = glGetStringi(GL_EXTENSIONS,i).decode()
-            else:
-                ext_str += ", " + glGetStringi(GL_EXTENSIONS,i).decode()
+
+        # ext_count = glGetIntegerv(GL_NUM_EXTENSIONS)
+        # ext_str = ""
+        # for i in range(ext_count):
+        #     if len(ext_str) == 0:
+        #         ext_str = glGetStringi(GL_EXTENSIONS,i).decode()
+        #     else:
+        #         ext_str += ", " + glGetStringi(GL_EXTENSIONS,i).decode()
+        
+        ext_str = glGetString(GL_EXTENSIONS).decode()
         print("Extensions:",ext_str)
 
         glFlush()
